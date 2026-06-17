@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио - Продуктовый Аналитик</title>
+  <meta name="description" content="Портфолио продуктового аналитика. Опыт работы с SQL, Python, Amplitude. Продуктовые метрики: ARPU, ARPPU, CAC, LTV, Retention, DAU/MAU. Выпускник Compass College." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── НАВИГАЦИЯ ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">DataPulse</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">Обо мне</a></li>
+        <li><a href="#skills" class="nav-link">Навыки</a></li>
+        <li><a href="#metrics" class="nav-link">Метрики</a></li>
+        <li><a href="#projects" class="nav-link">Проекты</a></li>
+        <li><a href="#contact" class="nav-link">Контакты</a></li>
+      </ul>
+      <button class="nav-cta" id="navCta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Связаться
+      </button>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="hero_bg.png" alt="Analytics background" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Открыт к предложениям</span>
+      </div>
+      <h1 class="hero-title">
+        Продуктовый
+        <span class="gradient-text">Аналитик</span>
+      </h1>
+      <p class="hero-subtitle">
+        Превращаю данные в продуктовые решения.<br/>
+        SQL · Python · Amplitude · Growth Metrics
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="15">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Проектов</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="20">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Метрик освоено</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="3">0</span><span class="stat-suffix"></span>
+          <span class="stat-label">Инструмента</span>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary" id="heroProjectsBtn">
+          <span>Смотреть проекты</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost" id="heroContactBtn">
+          <span>Контакты</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="dashboard-mockup">
+        <div class="mockup-header">
+          <div class="mockup-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="mockup-title">Product Analytics Dashboard</span>
+        </div>
+        <div class="mockup-body">
+          <img src="analytics_dashboard.png" alt="Analytics Dashboard" class="dashboard-img" />
+          <div class="mockup-metrics">
+            <div class="mini-metric green">
+              <span class="mm-label">DAU</span>
+              <span class="mm-val">↑ 12%</span>
+            </div>
+            <div class="mini-metric cyan">
+              <span class="mm-label">Retention D7</span>
+              <span class="mm-val">38%</span>
+            </div>
+            <div class="mini-metric purple">
+              <span class="mm-label">ARPU</span>
+              <span class="mm-val">$4.20</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Прокрутить вниз">
+      <span class="scroll-arrow"></span>
+    </a>
+  </section>
+
+  <!-- ── ОБО МНЕ ── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label">Обо мне</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-title">Данные - это <span class="gradient-text">язык продукта</span></h2>
+          <p class="about-desc">
+            Я продуктовый аналитик с системным подходом к данным. Умею не просто строить дашборды - умею читать за цифрами поведение пользователей и находить точки роста продукта.
+          </p>
+          <p class="about-desc">
+            Выпускник <strong>Compass College</strong> по направлению продуктовой аналитики. В учёбе и проектах работал с реальными датасетами: проводил когортный анализ, строил воронки конверсии, считал юнит-экономику и помогал командам принимать data-driven решения.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item" id="highlight-education">
+              <div class="highlight-icon">🎓</div>
+              <div class="highlight-info">
+                <strong>Compass College</strong>
+                <span>Продуктовый аналитик - 2026</span>
+              </div>
+            </div>
+            <div class="highlight-item" id="highlight-focus">
+              <div class="highlight-icon">🎯</div>
+              <div class="highlight-info">
+                <strong>Специализация</strong>
+                <span>Growth & Retention Analytics</span>
+              </div>
+            </div>
+            <div class="highlight-item" id="highlight-location">
+              <div class="highlight-icon">📍</div>
+              <div class="highlight-info">
+                <strong>Локация</strong>
+                <span>Кыргызстан</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <div class="about-card-stack">
+            <div class="about-card card-main">
+              <div class="card-icon">📊</div>
+              <h3>Аналитическое мышление</h3>
+              <p>Формулирую гипотезы, проверяю через данные, делаю выводы</p>
+            </div>
+            <div class="about-card card-secondary">
+              <div class="card-icon">🔗</div>
+              <h3>Связь с бизнесом</h3>
+              <p>Перевожу метрики в бизнес-решения, понятные продакт-менеджерам</p>
+            </div>
+            <div class="about-card card-tertiary">
+              <div class="card-icon">⚡</div>
+              <h3>Быстрый старт</h3>
+              <p>Быстро погружаюсь в продукт и начинаю приносить пользу</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── НАВЫКИ ── -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label">Инструменты</div>
+      <h2 class="section-title text-center reveal">Мой <span class="gradient-text">стек</span></h2>
+      <p class="section-subtitle text-center reveal">Инструменты, которые использую для сбора, обработки и визуализации данных</p>
+
+      <div class="skills-grid">
+
+        <div class="skill-card reveal" id="skill-sql">
+          <div class="skill-header">
+            <div class="skill-icon sql-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="12" cy="6" rx="8" ry="3" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 6v4c0 1.657 3.582 3 8 3s8-1.343 8-3V6" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 10v4c0 1.657 3.582 3 8 3s8-1.343 8-3v-4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 14v4c0 1.657 3.582 3 8 3s8-1.343 8-3v-4" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="skill-meta">
+              <h3>SQL</h3>
+              <span class="skill-level advanced">Продвинутый</span>
+            </div>
+          </div>
+          <p class="skill-desc">Пишу сложные запросы с JOIN, подзапросами, оконными функциями. Работаю с PostgreSQL, ClickHouse.</p>
+          <div class="skill-tags">
+            <span class="tag">SELECT / JOIN</span>
+            <span class="tag">Window Functions</span>
+            <span class="tag">CTEs</span>
+            <span class="tag">Aggregations</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="85"></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="skill-python">
+          <div class="skill-header">
+            <div class="skill-icon python-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 7 4.5 7 4.5V7h5v1H5S2 7.5 2 12s3 5 3 5h2v-2.5S6.5 12 9 12h6c2 0 3-1 3-3V7c0-2-1.5-5-6-5zM9.5 5.5a1 1 0 110 2 1 1 0 010-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M12 22c5.52 0 5-2.5 5-2.5V17h-5v-1h7s3 .5 3-4-3-5-3-5h-2v2.5S17.5 12 15 12H9c-2 0-3 1-3 3v2c0 2 1.5 5 6 5zm2.5-3.5a1 1 0 110-2 1 1 0 010 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="skill-meta">
+              <h3>Python</h3>
+              <span class="skill-level intermediate">Средний</span>
+            </div>
+          </div>
+          <p class="skill-desc">Анализ данных с pandas, визуализация через matplotlib/seaborn, автоматизация рутинных задач.</p>
+          <div class="skill-tags">
+            <span class="tag">pandas</span>
+            <span class="tag">matplotlib</span>
+            <span class="tag">seaborn</span>
+            <span class="tag">Jupyter</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="72"></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="skill-amplitude">
+          <div class="skill-header">
+            <div class="skill-icon amplitude-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 12h4l3-7 4 14 3-10 2 3h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="skill-meta">
+              <h3>Amplitude</h3>
+              <span class="skill-level intermediate">Средний</span>
+            </div>
+          </div>
+          <p class="skill-desc">Строю воронки, когортный анализ, Retention-чарты, пользовательские пути и дашборды для стейкхолдеров.</p>
+          <div class="skill-tags">
+            <span class="tag">Funnels</span>
+            <span class="tag">Cohorts</span>
+            <span class="tag">Retention</span>
+            <span class="tag">User Paths</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="78"></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="skill-other">
+          <div class="skill-header">
+            <div class="skill-icon other-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="skill-meta">
+              <h3>Дополнительно</h3>
+              <span class="skill-level base">Базовый+</span>
+            </div>
+          </div>
+          <p class="skill-desc">Набор инструментов для полного цикла аналитики - от сбора данных до презентации результатов.</p>
+          <div class="skill-tags">
+            <span class="tag">Excel / Sheets</span>
+            <span class="tag">Tableau / Looker</span>
+            <span class="tag">Figma (чтение)</span>
+            <span class="tag">A/B тесты</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="65"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── МЕТРИКИ ── -->
+  <section class="metrics section" id="metrics">
+    <div class="container">
+      <div class="section-label">Метрики</div>
+      <h2 class="section-title text-center reveal">Продуктовые <span class="gradient-text">метрики</span></h2>
+      <p class="section-subtitle text-center reveal">Знаю, что считать, зачем считать и как использовать в продуктовых решениях</p>
+
+      <div class="metrics-tabs reveal" id="metricsTabs">
+        <button class="metrics-tab active" data-tab="monetization" id="tab-monetization">💰 Монетизация</button>
+        <button class="metrics-tab" data-tab="engagement" id="tab-engagement">📈 Вовлечённость</button>
+        <button class="metrics-tab" data-tab="growth" id="tab-growth">🚀 Рост</button>
+        <button class="metrics-tab" data-tab="retention" id="tab-retention">🔄 Удержание</button>
+      </div>
+
+      <div class="metrics-content">
+
+        <div class="metrics-panel active" id="panel-monetization">
+          <div class="metrics-cards-grid">
+            <div class="metric-card" id="metric-arpu">
+              <div class="metric-badge">ARPU</div>
+              <h4>Average Revenue Per User</h4>
+              <p>Средняя выручка на одного пользователя. Ключевая метрика для оценки монетизации всей базы. Помогает понять общий уровень генерации выручки.</p>
+              <div class="metric-formula">
+                <code>ARPU = Revenue / Total Users</code>
+              </div>
+              <div class="metric-use">Используется для: сравнения с конкурентами, трекинга роста монетизации</div>
+            </div>
+            <div class="metric-card" id="metric-arppu">
+              <div class="metric-badge purple">ARPPU</div>
+              <h4>Average Revenue Per Paying User</h4>
+              <p>Выручка на платящего пользователя. Показывает, сколько реально приносит каждый платящий - важно для оценки ценовой политики.</p>
+              <div class="metric-formula">
+                <code>ARPPU = Revenue / Paying Users</code>
+              </div>
+              <div class="metric-use">Используется для: анализа ценовых пакетов, сравнения сегментов</div>
+            </div>
+            <div class="metric-card" id="metric-ltv">
+              <div class="metric-badge green">LTV</div>
+              <h4>Lifetime Value</h4>
+              <p>Суммарная выручка от пользователя за весь период его жизни в продукте. Основа для оценки рентабельности привлечения.</p>
+              <div class="metric-formula">
+                <code>LTV = ARPU × Avg Lifetime</code>
+              </div>
+              <div class="metric-use">Используется для: сравнения LTV vs CAC, оценки юнит-экономики</div>
+            </div>
+            <div class="metric-card" id="metric-cac">
+              <div class="metric-badge orange">CAC</div>
+              <h4>Customer Acquisition Cost</h4>
+              <p>Стоимость привлечения одного клиента. Определяет эффективность маркетинга и рекламы. LTV/CAC &gt; 3 - здоровый бизнес.</p>
+              <div class="metric-formula">
+                <code>CAC = Marketing Spend / New Customers</code>
+              </div>
+              <div class="metric-use">Используется для: оценки окупаемости каналов, LTV/CAC анализа</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="metrics-panel" id="panel-engagement">
+          <div class="metrics-cards-grid">
+            <div class="metric-card" id="metric-dau">
+              <div class="metric-badge">DAU</div>
+              <h4>Daily Active Users</h4>
+              <p>Количество уникальных пользователей, совершивших целевое действие за сутки. Показатель ежедневной активности продукта.</p>
+              <div class="metric-formula">
+                <code>DAU = Unique users / day</code>
+              </div>
+              <div class="metric-use">Используется для: мониторинга активности, оценки фичей</div>
+            </div>
+            <div class="metric-card" id="metric-mau">
+              <div class="metric-badge purple">MAU</div>
+              <h4>Monthly Active Users</h4>
+              <p>Уникальные пользователи за месяц. Важен для оценки размера аудитории и долгосрочной вовлечённости.</p>
+              <div class="metric-formula">
+                <code>MAU = Unique users / month</code>
+              </div>
+              <div class="metric-use">Используется для: оценки масштаба, роста продукта</div>
+            </div>
+            <div class="metric-card" id="metric-stickiness">
+              <div class="metric-badge green">DAU/MAU</div>
+              <h4>Stickiness</h4>
+              <p>Соотношение дневной и месячной аудитории. Показывает, насколько «прилипчив» продукт. 20%+ - хорошо, 50%+ - отлично.</p>
+              <div class="metric-formula">
+                <code>Stickiness = DAU / MAU × 100%</code>
+              </div>
+              <div class="metric-use">Используется для: оценки привычки использования продукта</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="metrics-panel" id="panel-growth">
+          <div class="metrics-cards-grid">
+            <div class="metric-card" id="metric-c1">
+              <div class="metric-badge">C1</div>
+              <h4>Конверсия 1-го шага</h4>
+              <p>Конверсия на первом шаге воронки (регистрация, установка, первое действие). Критически важна для оценки онбординга.</p>
+              <div class="metric-formula">
+                <code>C1 = Step1 Completions / Starts × 100%</code>
+              </div>
+              <div class="metric-use">Используется для: A/B тестов онбординга, UX-оптимизации</div>
+            </div>
+            <div class="metric-card" id="metric-conversion">
+              <div class="metric-badge purple">Воронка</div>
+              <h4>Funnel Conversion</h4>
+              <p>Процент пользователей, проходящих каждый шаг воронки. Позволяет найти «дыры» и точки наибольшего оттока.</p>
+              <div class="metric-formula">
+                <code>Conv = Users at step N / Step 1 × 100%</code>
+              </div>
+              <div class="metric-use">Используется для: поиска узких мест в UX, оптимизации флоу</div>
+            </div>
+            <div class="metric-card" id="metric-churn">
+              <div class="metric-badge orange">Churn Rate</div>
+              <h4>Отток пользователей</h4>
+              <p>Доля пользователей, которые перестали использовать продукт за период. Обратная сторона Retention.</p>
+              <div class="metric-formula">
+                <code>Churn = Lost Users / Start Users × 100%</code>
+              </div>
+              <div class="metric-use">Используется для: оценки удержания, анализа причин оттока</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="metrics-panel" id="panel-retention">
+          <div class="metrics-cards-grid">
+            <div class="metric-card" id="metric-retention">
+              <div class="metric-badge">Retention</div>
+              <h4>Удержание пользователей</h4>
+              <p>Процент пользователей, вернувшихся в продукт через N дней (D1, D7, D30). Ключевая метрика качества продукта.</p>
+              <div class="metric-formula">
+                <code>Retention D7 = Returned D7 / Cohort × 100%</code>
+              </div>
+              <div class="metric-use">Используется для: когортного анализа, оценки онбординга</div>
+            </div>
+            <div class="metric-card" id="metric-cohort">
+              <div class="metric-badge green">Когорты</div>
+              <h4>Cohort Analysis</h4>
+              <p>Сравнение групп пользователей, привлечённых в разное время. Позволяет понять, как изменения в продукте влияют на поведение.</p>
+              <div class="metric-formula">
+                <code>Cohort = Group of users by acquisition date</code>
+              </div>
+              <div class="metric-use">Используется для: оценки фичей, сезонности, A/B тестов</div>
+            </div>
+            <div class="metric-card" id="metric-nps">
+              <div class="metric-badge purple">NPS</div>
+              <h4>Net Promoter Score</h4>
+              <p>Индекс лояльности пользователей. Показывает, насколько они готовы рекомендовать продукт. Хорошо коррелирует с Retention.</p>
+              <div class="metric-formula">
+                <code>NPS = % Promoters − % Detractors</code>
+              </div>
+              <div class="metric-use">Используется для: оценки удовлетворённости, прогнозирования оттока</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ПРОЕКТЫ ── -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label">Проекты</div>
+      <h2 class="section-title text-center reveal">Учебные <span class="gradient-text">кейсы</span></h2>
+      <p class="section-subtitle text-center reveal">Реальные задачи, решённые в рамках обучения и самостоятельных проектов</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card featured reveal" id="project-retention">
+          <div class="project-tag">Ключевой проект</div>
+          <div class="project-header">
+            <div class="project-icon">📊</div>
+            <div class="project-meta">
+              <h3>Когортный Retention-анализ</h3>
+              <div class="project-chips">
+                <span class="chip">SQL</span>
+                <span class="chip">Python</span>
+                <span class="chip">Retention</span>
+              </div>
+            </div>
+          </div>
+          <p class="project-desc">
+            Провёл когортный анализ удержания пользователей мобильного приложения. Выявил, что когорты февраля показывают D7-Retention на 8% ниже среднего. Нашёл причину - изменение онбординга. Предложил гипотезу для A/B теста.
+          </p>
+          <div class="project-results">
+            <div class="result-item">
+              <span class="result-num">+8%</span>
+              <span class="result-label">Потенциал роста Retention</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">3 когорты</span>
+              <span class="result-label">Проанализировано</span>
+            </div>
+          </div>
+          <div class="project-tools">
+            <span class="tool-tag">PostgreSQL</span>
+            <span class="tool-tag">pandas</span>
+            <span class="tool-tag">seaborn</span>
+            <span class="tool-tag">Amplitude</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal" id="project-funnel">
+          <div class="project-header">
+            <div class="project-icon">🔽</div>
+            <div class="project-meta">
+              <h3>Анализ воронки конверсии</h3>
+              <div class="project-chips">
+                <span class="chip">Amplitude</span>
+                <span class="chip">C1</span>
+              </div>
+            </div>
+          </div>
+          <p class="project-desc">
+            Построил воронку от регистрации до первой покупки. Определил шаг с наибольшим оттоком (73% дропа на экране ввода платёжных данных). Предложил UX-упрощение.
+          </p>
+          <div class="project-results">
+            <div class="result-item">
+              <span class="result-num">−73%</span>
+              <span class="result-label">Дроп на платёжном шаге</span>
+            </div>
+          </div>
+          <div class="project-tools">
+            <span class="tool-tag">Amplitude</span>
+            <span class="tool-tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal" id="project-unitecon">
+          <div class="project-header">
+            <div class="project-icon">💹</div>
+            <div class="project-meta">
+              <h3>Юнит-экономика продукта</h3>
+              <div class="project-chips">
+                <span class="chip">LTV</span>
+                <span class="chip">CAC</span>
+                <span class="chip">ARPU</span>
+              </div>
+            </div>
+          </div>
+          <p class="project-desc">
+            Посчитал юнит-экономику учебного SaaS-продукта: CAC по каналам, LTV когорт, точку окупаемости. Сделал вывод о нерентабельности двух каналов привлечения.
+          </p>
+          <div class="project-results">
+            <div class="result-item">
+              <span class="result-num">LTV/CAC = 2.1</span>
+              <span class="result-label">Выявлена нерентабельность</span>
+            </div>
+          </div>
+          <div class="project-tools">
+            <span class="tool-tag">Excel</span>
+            <span class="tool-tag">Python</span>
+            <span class="tool-tag">matplotlib</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal" id="project-ab">
+          <div class="project-header">
+            <div class="project-icon">🧪</div>
+            <div class="project-meta">
+              <h3>Дизайн A/B теста</h3>
+              <div class="project-chips">
+                <span class="chip">A/B</span>
+                <span class="chip">Статистика</span>
+              </div>
+            </div>
+          </div>
+          <p class="project-desc">
+            Разработал дизайн A/B теста для проверки нового онбординга: рассчитал необходимый размер выборки, определил метрики успеха (C1, D7 Retention), описал критерии остановки.
+          </p>
+          <div class="project-results">
+            <div class="result-item">
+              <span class="result-num">p &lt; 0.05</span>
+              <span class="result-label">Уровень значимости</span>
+            </div>
+          </div>
+          <div class="project-tools">
+            <span class="tool-tag">Python</span>
+            <span class="tool-tag">scipy</span>
+            <span class="tool-tag">SQL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── КОНТАКТЫ ── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <div class="section-label">Контакты</div>
+        <h2 class="section-title">Готов к <span class="gradient-text">новым задачам</span></h2>
+        <p class="contact-desc">Если вы ищете внимательного аналитика, который умеет превращать данные в решения - давайте пообщаемся.</p>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com" class="contact-card" id="contact-email">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-info">
+              <strong>Email</strong>
+              <span>your.email@example.com</span>
+            </div>
+            <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://t.me/yourusername" class="contact-card" id="contact-telegram">
+            <div class="contact-icon">✈️</div>
+            <div class="contact-info">
+              <strong>Telegram</strong>
+              <span>@yourusername</span>
+            </div>
+            <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" class="contact-card" id="contact-linkedin">
+            <div class="contact-icon">💼</div>
+            <div class="contact-info">
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/in/yourprofile</span>
+            </div>
+            <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-icon">⬡</span>
+          <span class="logo-text">DataPulse Portfolio</span>
+        </div>
+        <p class="footer-copy">© 2024 · Продуктовый Аналитик · Compass College</p>
+        <div class="footer-links">
+          <a href="#hero" class="footer-link">Наверх ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
