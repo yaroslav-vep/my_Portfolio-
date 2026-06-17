@@ -100,7 +100,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
       color: AppColors.surface,
       padding: const EdgeInsets.symmetric(vertical: 28, horizontal: 24),
       child: Text(
-        '© 2024 · Выпускник Compass College · Продуктовый аналитик',
+        '© 2024 · Выпускник Compass College · IT & Product Design',
         textAlign: TextAlign.center,
         style: GoogleFonts.inter(
           fontSize: 13,
