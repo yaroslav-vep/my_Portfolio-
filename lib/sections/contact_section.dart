@@ -34,11 +34,7 @@ class ContactSection extends StatelessWidget {
             delay: const Duration(milliseconds: 160),
             child: _buildCards(),
           ),
-          const SizedBox(height: 48),
-          FadeIn(
-            delay: const Duration(milliseconds: 200),
-            child: _buildMotivation(),
-          ),
+          const SizedBox(height: 24),
         ],
       ),
     );
@@ -49,20 +45,20 @@ class ContactSection extends StatelessWidget {
       _ContactItem(
         icon: Icons.email_outlined,
         label: 'Email',
-        value: 'your.email@example.com',
-        url: 'mailto:your.email@example.com',
+        value: 'yaroslav.vep@gmail.com',
+        url: 'mailto:yaroslav.vep@gmail.com',
       ),
       _ContactItem(
         icon: Icons.telegram,
         label: 'Telegram',
-        value: '@yourusername',
-        url: 'https://t.me/yourusername',
+        value: '@Yaroslav_vep',
+        url: 'https://t.me/Yaroslav_vep',
       ),
       _ContactItem(
         icon: Icons.link,
         label: 'LinkedIn',
-        value: 'linkedin.com/in/yourprofile',
-        url: 'https://linkedin.com/in/yourprofile',
+        value: 'linkedin.com/in/yaroslav-veprentsev-bb5422304',
+        url: 'https://www.linkedin.com/in/yaroslav-veprentsev-bb5422304',
       ),
     ];
 
@@ -73,59 +69,7 @@ class ContactSection extends StatelessWidget {
     );
   }
 
-  Widget _buildMotivation() {
-    return Container(
-      padding: const EdgeInsets.all(28),
-      decoration: BoxDecoration(
-        color: AppColors.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppColors.border),
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              color: AppColors.accentLight,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: const Icon(Icons.school_outlined, size: 20, color: AppColors.accent),
-          ),
-          const SizedBox(width: 16),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Почему именно бакалавриат',
-                  style: GoogleFonts.inter(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.textPrimary,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  'На курсе я понял, что мне интересно не просто применять метрики, '
-                  'а понимать, как они устроены изнутри. Хочу получить сильную базу в '
-                  'статистике, в экспериментах, научиться работать с данными на уровне, '
-                  'который даёт академическая программа бакалавриата. Вижу себя через 5 лет '
-                  'в роли сильного аналитика в продуктовой команде.',
-                  style: GoogleFonts.inter(
-                    fontSize: 14,
-                    color: AppColors.textSecondary,
-                    height: 1.75,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+  
 }
 
 class _ContactItem {
