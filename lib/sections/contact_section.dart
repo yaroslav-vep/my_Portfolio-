@@ -34,7 +34,6 @@ class ContactSection extends StatelessWidget {
             delay: const Duration(milliseconds: 160),
             child: _buildCards(),
           ),
-          const SizedBox(height: 24),
         ],
       ),
     );
@@ -57,7 +56,7 @@ class ContactSection extends StatelessWidget {
       _ContactItem(
         icon: Icons.link,
         label: 'LinkedIn',
-        value: 'linkedin.com/in/yaroslav-veprentsev-bb5422304',
+        value: 'linkedin.com/in/yaroslav-veprentsev',
         url: 'https://www.linkedin.com/in/yaroslav-veprentsev-bb5422304',
       ),
     ];
@@ -68,8 +67,6 @@ class ContactSection extends StatelessWidget {
       children: contacts.map((c) => _ContactCard(item: c)).toList(),
     );
   }
-
-  
 }
 
 class _ContactItem {
